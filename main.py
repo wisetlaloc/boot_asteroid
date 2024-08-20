@@ -6,6 +6,7 @@ from asteroid import Asteroid
 from asteroid_field import AsteroidField
 from constants import *
 from player import Player
+from shot import Shot
 
 
 def main():
@@ -23,6 +24,8 @@ def main():
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = updatable
     AsteroidField()
+
+    Shot.containers = (updatable, drawable)
 
     dt = 0
     tick = clock.tick(60) / 1000
